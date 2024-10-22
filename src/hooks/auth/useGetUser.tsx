@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import { supabase } from 'src/supabaseClient';
 import { enqueueSnackbar } from 'notistack';
-import { productSnackbarMessages } from 'src/constants';
+import { equipoSnackbarMessages } from 'src/constants';
 import { API_KEYS } from 'src/query/keys/queryConfig';
 import { User } from '@supabase/supabase-js';
 
@@ -23,7 +23,7 @@ const useGetUser = () => {
     queryKey: [API_KEYS.FETCH_USER],
     queryFn: () => getUser(),
     throwOnError: () => {
-      enqueueSnackbar(productSnackbarMessages.errors.detail, {
+      enqueueSnackbar(equipoSnackbarMessages.errors.detail, {
         variant: 'error',
       });
       return true;

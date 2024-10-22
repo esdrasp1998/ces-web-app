@@ -1,6 +1,6 @@
 export {
   authSnackbarMessages,
-  productSnackbarMessages,
+  equipoSnackbarMessages,
   storeSnackbarMessages,
   expenseCategorySnackbarMessages,
   combosSnackbarMessages,
@@ -18,7 +18,6 @@ export {
 export {
   expenseCategoryTypeItems,
   establishmentItems,
-  inventorySubtractionItems,
   apiItems,
 } from './selectItems';
 

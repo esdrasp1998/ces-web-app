@@ -25,7 +25,7 @@ const useSignIn = () => {
       return data;
     },
     onSuccess: () => {
-      navigate({ to: '/products' });
+      navigate({ to: '/equipos' });
     },
     onError: () => {
       enqueueSnackbar(authSnackbarMessages.errors.login, { variant: 'error' });

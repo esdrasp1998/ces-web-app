@@ -1,5 +1,5 @@
 import {
-  PRODUCT_API_KEYS,
+  EQUIPOS_API_KEYS,
   EXPENSE_CATEGORIES_API_KEYS,
   USER_API_KEYS,
   STORE_API_KEYS,
@@ -8,7 +8,7 @@ import {
 } from './index';
 
 export const API_KEYS = {
-  ...PRODUCT_API_KEYS,
+  ...EQUIPOS_API_KEYS,
   ...USER_API_KEYS,
   ...STORE_API_KEYS,
   ...EXPENSE_CATEGORIES_API_KEYS,

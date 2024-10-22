@@ -3,16 +3,16 @@ import { createTheme, responsiveFontSizes } from '@mui/material/styles';
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#FF8F00', // Moderately aggressive orange color
-      light: '#FFBD45',
-      dark: '#C65E00',
-      contrastText: '#fff',
+      main: '#1976D2', // Darker blue
+      light: '#63A4FF', // Lighter blue
+      dark: '#004BA0', // Even darker blue
+      contrastText: '#fff', // White text
     },
     secondary: {
-      main: '#FB7916',
-      light: '#FC9546',
-      dark: '#361801',
-      contrastText: '#fff',
+      main: '#BBDEFB', // Light blue
+      light: '#E3F2FD', // Very light blue
+      dark: '#90CAF9', // Medium blue
+      contrastText: '#fff', // White text
     },
   },
   typography: {

@@ -23,7 +23,7 @@ import { productFormsValidations } from 'src/constants';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 
-export const Route = createLazyFileRoute('/_auth/products/add-product')({
+export const Route = createLazyFileRoute('/_auth/equipos/add-equipo')({
   component: AddProduct,
 });
 

@@ -1,5 +1,5 @@
 import { productFormsValidations } from 'src/constants/formValidations';
-import useGetProducts from './useGetProducts';
+import useGetProducts from './useGetEquipos';
 import * as yup from 'yup';
 import { Dispatch, useEffect } from 'react';
 import { useFormik } from 'formik';

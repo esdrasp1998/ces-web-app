@@ -2,7 +2,7 @@ import { productFormsValidations } from 'src/constants/formValidations';
 import * as yup from 'yup';
 import { Dispatch, useEffect } from 'react';
 import { useFormik } from 'formik';
-import useGetProducts from '../products/useGetProducts';
+import useGetProducts from '../equipos/useGetEquipos';
 import { EditableStoreProduct } from './interface';
 
 const useEditStoreProduct = ({

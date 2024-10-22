@@ -1,22 +1,21 @@
 import { createLazyFileRoute } from '@tanstack/react-router';
-import useGetProduct from 'src/hooks/products/useGetProduct';
+import useGetProduct from 'src/hooks/equipos/useGetProduct';
 import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 import Loader from 'src/components/atoms/Loader';
 import {
   formatTimestamp,
   translateEstablishment,
-  translateProductInventorySubtraction,
 } from 'src/utils';
 import Card from '@mui/material/Card';
 import { DynamicImage } from 'src/components/atoms/DynamicImage';
 import DetailsTemplate from 'src/components/templates/DetailsTemplate';
 import Divider from 'src/components/atoms/Divider';
-import useGetProductDetails from 'src/hooks/products/useGetProductDetail';
+import useGetProductDetails from 'src/hooks/equipos/useGetProductDetail';
 import ListItemText from '@mui/material/ListItemText';
 import Grid from '@mui/material/Grid';
 
-export const Route = createLazyFileRoute('/_auth/products/$id')({
+export const Route = createLazyFileRoute('/_auth/equipos/$id')({
   component: ProductComponent,
 });
 
@@ -33,7 +32,7 @@ function ProductComponent() {
   return (
     <DetailsTemplate
       title="Detalle del Producto"
-      returnButtonProps={{ to: '/products', params: {} }}
+      returnButtonProps={{ to: '/equipos', params: {} }}
       displaySubtitle={false}
       gridSizes={
         product.imagePublicUrl ? { xs: 10, sm: 10, md: 12 } : undefined
@@ -53,9 +52,6 @@ function ProductComponent() {
               <Typography variant="body1">Nombre: {product.name}</Typography>
               <Typography variant="body1">
                 Se resta de manera:{' '}
-                {translateProductInventorySubtraction(
-                  product.inventory_subtraction,
-                )}
               </Typography>
               <Typography variant="body1">
                 Solo se puede comprar en:{' '}

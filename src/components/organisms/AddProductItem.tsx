@@ -3,9 +3,9 @@ import InputField from '../atoms/InputField';
 import Button from '@mui/material/Button';
 import { productFormsValidations } from 'src/constants';
 import { apiItems } from 'src/constants/selectItems';
-import useAddProductDetail from 'src/hooks/products/useAddProductDetail';
+import useAddProductDetail from 'src/hooks/equipos/useAddProductDetail';
 import useAddComboProduct from 'src/hooks/combos/useAddComboProduct';
-import { EditableProductDetail } from 'src/hooks/products/interface';
+import { EditableProductDetail } from 'src/hooks/equipos/interface';
 import { EditableComboProduct } from 'src/hooks/combos/interface';
 
 interface AddProductItemProps {

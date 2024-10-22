@@ -22,7 +22,7 @@ const useUpdatePassword = () => {
       enqueueSnackbar(authSnackbarMessages.success.passwordUpdate, {
         variant: 'success',
       });
-      navigate({ to: '/products' });
+      navigate({ to: '/equipos' });
     },
     onError: () => {
       enqueueSnackbar(authSnackbarMessages.errors.passwordUpdate, {

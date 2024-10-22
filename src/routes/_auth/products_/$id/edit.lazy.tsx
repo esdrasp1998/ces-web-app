@@ -2,9 +2,9 @@ import { createLazyFileRoute } from '@tanstack/react-router';
 import Stack from '@mui/material/Stack';
 import InputField from 'src/components/atoms/InputField';
 import { Button } from 'src/components/atoms/Button';
-import useGetProduct from 'src/hooks/products/useGetProduct';
+import useGetProduct from 'src/hooks/equipos/useGetProduct';
 import Loader from 'src/components/atoms/Loader';
-import useEditProduct from 'src/hooks/products/useEditProduct';
+import useEditProduct from 'src/hooks/equipos/useEditProduct';
 import ImageUploadCard from 'src/components/molecules/ImageUploadCard';
 import useDeleteFile from 'src/hooks/common/useDeleteFile';
 import { API_KEYS } from 'src/query/keys/queryConfig';
@@ -74,7 +74,7 @@ function EditProduct() {
   return (
     <DetailsTemplate
       title="Editar Producto"
-      returnButtonProps={{ to: '/products', params: {} }}
+      returnButtonProps={{ to: '/equipos', params: {} }}
       gridSizes={{ xs: 10, sm: 10, md: 12 }}
     >
       <>

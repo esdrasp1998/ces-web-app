@@ -77,7 +77,7 @@ export const AppTopBar: React.FC<AppTopBarProps> = ({
             textDecoration: 'none',
           }}
         >
-          Pollos de Oriente
+          CES+
         </Typography>
 
         <Box sx={{ flexGrow: 0 }}>

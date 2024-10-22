@@ -1,44 +1,41 @@
 import { createLazyFileRoute } from '@tanstack/react-router'
 import Typography from '@mui/material/Typography';
 import { Link as RouterLink } from '@tanstack/react-router';
-import useSignIn from 'src/hooks/auth/useSignIn';
+import useSignUp from 'src/hooks/auth/useSignUp';
 import Link from '@mui/material/Link';
 import AuthFormTemplate from 'src/components/templates/AuthFormTemplate';
 import InputField from 'src/components/atoms/InputField';
 
-export const Route = createLazyFileRoute('/_no_auth/signin')({
-  component: SignIn
+export const Route = createLazyFileRoute('/_no_auth/signup')({
+  component: SignUp
 })
 
-function SignIn() {
-  const { formik, isLoading } = useSignIn();
+function SignUp () {
+  const { formik, isLoading } = useSignUp();
 
   return (
-    <AuthFormTemplate 
-      title="Iniciar Sesión"
-      submitButtonText='Iniciar Sesión'
+    <AuthFormTemplate
+      title="Crear Cuenta"
+      submitButtonText='Crear Cuenta'
       onSubmit={formik.handleSubmit}
       submitLoading={isLoading}
     >
-      <InputField 
+      <InputField
         id='email'
-        name="email"
+        name="email" 
         label='Correo' 
         type="email"
         formik={formik}
       />
       <InputField 
         id='password'
-        name='password' 
-        label='Contraseña' 
+        name="password"
+        label='Contraseña'
         type='password'
         formik={formik}
       />
-      <Typography align='right'>
-        <Link component={RouterLink} to='/reset-password'>Se te olvido tu contraseña?</Link>
-      </Typography>
       <Typography>
-        No tienes una cuenta? <Link component={RouterLink} to='/signup'>Crear Cuenta</Link>
+        Ya tienes una cuenta? <Link component={RouterLink} to='/'>Iniciar Sesión</Link>
       </Typography>
     </AuthFormTemplate>
   )

@@ -3,7 +3,7 @@ import * as yup from 'yup';
 import { productFormsValidations } from 'src/constants';
 import { useFormik } from 'formik';
 import { EditableStoreProduct } from './interface';
-import useGetProducts from '../products/useGetProducts';
+import useGetProducts from '../equipos/useGetEquipos';
 
 const useAddStoreProduct = ({
   productsList,

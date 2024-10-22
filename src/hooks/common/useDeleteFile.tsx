@@ -1,7 +1,7 @@
 import { useSnackbar } from 'notistack';
 import { supabase } from 'src/supabaseClient';
 import { useMutation } from '@tanstack/react-query';
-import { productSnackbarMessages } from 'src/constants';
+import { equipoSnackbarMessages } from 'src/constants';
 import { useQueryClient } from '@tanstack/react-query';
 
 interface deleteFile {
@@ -38,12 +38,12 @@ const useDeleteFile = () => {
     onSuccess: data => {
       if (data.invalidators)
         queryClient.invalidateQueries({ queryKey: data.invalidators });
-      enqueueSnackbar(productSnackbarMessages.success.imageDelete, {
+      enqueueSnackbar(equipoSnackbarMessages.success.delete, {
         variant: 'success',
       });
     },
     onError: () => {
-      enqueueSnackbar(productSnackbarMessages.errors.imageDelete, {
+      enqueueSnackbar(equipoSnackbarMessages.errors.delete, {
         variant: 'error',
       });
     },

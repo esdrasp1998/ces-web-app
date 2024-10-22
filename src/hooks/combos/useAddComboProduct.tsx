@@ -1,5 +1,5 @@
 import { Dispatch } from 'react';
-import useGetProducts from '../products/useGetProducts';
+import useGetProducts from '../equipos/useGetEquipos';
 import * as yup from 'yup';
 import { productFormsValidations } from 'src/constants';
 import { useFormik } from 'formik';

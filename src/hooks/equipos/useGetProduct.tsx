@@ -1,5 +1,5 @@
 import { API_KEYS } from 'src/query/keys/queryConfig';
-import { productSnackbarMessages } from 'src/constants';
+import { equipoSnackbarMessages } from 'src/constants';
 import useGetSingleEntity from 'src/hooks/common/useGetSingleEntity';
 import { supabase } from 'src/supabaseClient';
 
@@ -22,8 +22,8 @@ const useGetProduct = ({ id }: { id: string }) => {
   } = useGetSingleEntity({
     id,
     entity: 'products',
-    queryKey: API_KEYS.FETCH_PRODUCT,
-    snackbarMessages: productSnackbarMessages,
+    queryKey: API_KEYS.FETCH_EQUIPO_DETAIL,
+    snackbarMessages: equipoSnackbarMessages,
     processData,
     selectStatement: `*, expense_categories(name)`,
   });

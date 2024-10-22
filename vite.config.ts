@@ -12,10 +12,6 @@ export default defineConfig({
     checker({
       // e.g. use TypeScript check
       typescript: true,
-      eslint: {
-        // for example, lint .ts and .tsx
-        lintCommand: 'eslint "./src/**/*.{ts,tsx}"',
-      },
     }),
   ],
   resolve: {

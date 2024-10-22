@@ -20,7 +20,7 @@ const useResetPassword = () => {
   const { isPending, mutate } = useMutation({
     mutationFn: async (email: string) => {
       const { error } = await supabase.auth.resetPasswordForEmail(email, {
-        redirectTo: import.meta.env.VITE_SUPABASE_RESET_PASSWORD_URL,
+        redirectTo: import.meta.VITE_SUPABASE_RESET_PASSWORD_URL,
       });
 
       if (error) {
